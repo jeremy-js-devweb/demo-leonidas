@@ -41,6 +41,9 @@
       ],
       "@spartan-ng/dialog-helm": [
         "libs/ui/dialog-helm/src/index.ts"
+      ],
+      "@spartan-ng/menu-helm": [
+        "libs/ui/menu-helm/src/index.ts"
       ]
     }
   },

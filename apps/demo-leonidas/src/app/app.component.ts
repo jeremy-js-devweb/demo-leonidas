@@ -10,6 +10,7 @@ import {
   HlmCardHeaderDirective,
   HlmCardTitleDirective,
 } from '@spartan-ng/card-helm';
+import {MenuComponent} from "./menu/menu.component";
 
 @Component({
   standalone: true,
@@ -19,7 +20,7 @@ import {
     HlmCardTitleDirective,
     HlmCardDescriptionDirective,
     HlmCardContentDirective,
-    HlmCardFooterDirective,
+    HlmCardFooterDirective, MenuComponent,
   ],
   selector: 'demo-leonidas-root',
   template: `
@@ -40,6 +41,9 @@ import {
         <p hlmCardContent>Card Content</p>
         <p hlmCardFooter>Card Footer</p>
       </section>
+
+
+      <demo-leonidas-dropdown-menu/>
 
     </div>
   `
