@@ -50,6 +50,9 @@
       ],
       "@spartan-ng/label-helm": [
         "libs/ui/label-helm/src/index.ts"
+      ],
+      "@spartan-ng/popover-helm": [
+        "libs/ui/popover-helm/src/index.ts"
       ]
     }
   },
