@@ -20,6 +20,12 @@
     "paths": {
       "@spartan-ng/button-helm": [
         "libs/ui/button-helm/src/index.ts"
+      ],
+      "@spartan-ng/alert-helm": [
+        "libs/ui/alert-helm/src/index.ts"
+      ],
+      "@spartan-ng/icon-helm": [
+        "libs/ui/icon-helm/src/index.ts"
       ]
     }
   },
