@@ -26,6 +26,9 @@
       ],
       "@spartan-ng/icon-helm": [
         "libs/ui/icon-helm/src/index.ts"
+      ],
+      "@spartan-ng/alertdialog-helm": [
+        "libs/ui/alertdialog-helm/src/index.ts"
       ]
     }
   },

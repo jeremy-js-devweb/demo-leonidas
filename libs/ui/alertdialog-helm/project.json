@@ -1,0 +1,57 @@
+{
+  "name": "ui-alertdialog-helm",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/ui/alertdialog-helm/src",
+  "prefix": "hlm",
+  "tags": [],
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/angular:ng-packagr-lite",
+      "outputs": [
+        "{workspaceRoot}/dist/{projectRoot}"
+      ],
+      "options": {
+        "project": "libs/ui/alertdialog-helm/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/ui/alertdialog-helm/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/ui/alertdialog-helm/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": [
+        "{workspaceRoot}/coverage/{projectRoot}"
+      ],
+      "options": {
+        "jestConfig": "libs/ui/alertdialog-helm/jest.config.ts",
+        "passWithNoTests": true
+      },
+      "configurations": {
+        "ci": {
+          "ci": true,
+          "codeCoverage": true
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": [
+        "{options.outputFile}"
+      ],
+      "options": {
+        "lintFilePatterns": [
+          "libs/ui/alertdialog-helm/**/*.ts",
+          "libs/ui/alertdialog-helm/**/*.html",
+          "libs/ui/alertdialog-helm/package.json"
+        ]
+      }
+    }
+  }
+}

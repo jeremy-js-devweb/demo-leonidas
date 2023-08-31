@@ -5,10 +5,30 @@ import {
   HlmAlertIconDirective,
   HlmAlertTitleDirective,
 } from '@spartan-ng/alert-helm';
-import {HlmIconComponent} from '@spartan-ng/icon-helm';
 import {provideIcons} from '@ng-icons/core';
 import {radixChevronRight, radixCube} from '@ng-icons/radix-icons';
-import {HlmButtonDirective} from "@spartan-ng/button-helm";
+
+import {
+  BrnAlertDialogCloseDirective,
+  BrnAlertDialogComponent,
+  BrnAlertDialogContentDirective,
+  BrnAlertDialogDescriptionDirective,
+  BrnAlertDialogOverlayComponent,
+  BrnAlertDialogTitleDirective,
+  BrnAlertDialogTriggerDirective,
+} from '@spartan-ng/ui-alertdialog-brain';
+import {
+  HlmAlertDialogActionButtonDirective,
+  HlmAlertDialogCancelButtonDirective,
+  HlmAlertDialogContentDirective,
+  HlmAlertDialogDescriptionDirective,
+  HlmAlertDialogFooterComponent,
+  HlmAlertDialogHeaderComponent,
+  HlmAlertDialogOverlayDirective,
+  HlmAlertDialogTitleDirective,
+} from '@spartan-ng/alertdialog-helm';
+import {HlmButtonDirective} from '@spartan-ng/button-helm';
+import {HlmIconComponent} from '@spartan-ng/icon-helm';
 
 
 @Component({
@@ -20,7 +40,25 @@ import {HlmButtonDirective} from "@spartan-ng/button-helm";
     HlmAlertIconDirective,
     HlmAlertTitleDirective,
     HlmIconComponent,
-    HlmButtonDirective
+    HlmButtonDirective,
+
+
+    BrnAlertDialogComponent,
+    BrnAlertDialogOverlayComponent,
+    BrnAlertDialogTriggerDirective,
+    BrnAlertDialogContentDirective,
+    BrnAlertDialogCloseDirective,
+    BrnAlertDialogTitleDirective,
+    BrnAlertDialogDescriptionDirective,
+
+    HlmAlertDialogOverlayDirective,
+    HlmAlertDialogContentDirective,
+    HlmAlertDialogHeaderComponent,
+    HlmAlertDialogFooterComponent,
+    HlmAlertDialogTitleDirective,
+    HlmAlertDialogDescriptionDirective,
+    HlmAlertDialogCancelButtonDirective,
+    HlmAlertDialogActionButtonDirective,
   ],
   providers: [provideIcons({radixCube, radixChevronRight})],
   template: `
@@ -41,6 +79,24 @@ import {HlmButtonDirective} from "@spartan-ng/button-helm";
       <button hlmBtn>Base</button>
       <button hlmBtn variant='outline'>Outline</button>
     </section>
+
+    <brn-alert-dialog closeDelay="100">
+      <brn-alert-dialog-overlay hlm/>
+      <button id="edit-profile" variant="outline" brnAlertDialogTrigger hlmBtn>Delete Account</button>
+      <div hlmAlertDialogContent *brnAlertDialogContent="let ctx">
+        <hlm-alert-dialog-header>
+          <h3 brnAlertDialogTitle hlm>Are you absolutely sure?</h3>
+          <p brnAlertDialogDescription hlm>
+            This action cannot be undone. This will permanently delete your account and remove your data from our
+            servers.
+          </p>
+        </hlm-alert-dialog-header>
+        <hlm-alert-dialog-footer>
+          <button hlmAlertDialogCancel (click)="ctx.close()">Cancel</button>
+          <button hlmAlertDialogAction (click)="ctx.close()">Delete account</button>
+        </hlm-alert-dialog-footer>
+      </div>
+    </brn-alert-dialog>
   `,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
