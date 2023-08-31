@@ -53,6 +53,9 @@
       ],
       "@spartan-ng/popover-helm": [
         "libs/ui/popover-helm/src/index.ts"
+      ],
+      "@spartan-ng/progress-helm": [
+        "libs/ui/progress-helm/src/index.ts"
       ]
     }
   },

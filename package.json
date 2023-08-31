@@ -24,6 +24,7 @@
     "@spartan-ng/ui-dialog-brain": "^0.0.1-alpha.303",
     "@spartan-ng/ui-menu-brain": "^0.0.1-alpha.303",
     "@spartan-ng/ui-popover-brain": "^0.0.1-alpha.303",
+    "@spartan-ng/ui-progress-brain": "^0.0.1-alpha.303",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.13.0"
