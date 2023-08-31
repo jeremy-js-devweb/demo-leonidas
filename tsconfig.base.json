@@ -62,6 +62,9 @@
       ],
       "@spartan-ng/separator-helm": [
         "libs/ui/separator-helm/src/index.ts"
+      ],
+      "@spartan-ng/sheet-helm": [
+        "libs/ui/sheet-helm/src/index.ts"
       ]
     }
   },

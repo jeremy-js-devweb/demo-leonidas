@@ -20,6 +20,7 @@ import {HlmProgressDirective, HlmProgressIndicatorDirective} from '@spartan-ng/p
 import { NgFor } from '@angular/common';
 import { HlmScrollAreaComponent } from '@spartan-ng/scrollarea-helm';
 import { HlmSeparatorDirective } from '@spartan-ng/separator-helm';
+import {SheetComponent} from "./sheet/sheet.component";
 
 @Component({
   standalone: true,
@@ -33,7 +34,7 @@ import { HlmSeparatorDirective } from '@spartan-ng/separator-helm';
     HlmInputDirective,
     HlmLabelDirective, PopoverComponent,
     BrnProgressComponent, BrnProgressIndicatorComponent, HlmProgressIndicatorDirective, HlmProgressDirective,
-    NgFor, HlmSeparatorDirective, HlmScrollAreaComponent
+    NgFor, HlmSeparatorDirective, HlmScrollAreaComponent, SheetComponent
   ],
   selector: 'demo-leonidas-root',
   template: `
@@ -78,6 +79,8 @@ import { HlmSeparatorDirective } from '@spartan-ng/separator-helm';
                   </div>
               </div>
           </hlm-scroll-area>
+
+          <demo-leonidas-sheet/>
 
       </div>
   `
