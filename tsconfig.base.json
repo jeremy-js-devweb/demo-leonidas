@@ -29,6 +29,9 @@
       ],
       "@spartan-ng/alertdialog-helm": [
         "libs/ui/alertdialog-helm/src/index.ts"
+      ],
+      "@spartan-ng/aspectratio-helm": [
+        "libs/ui/aspectratio-helm/src/index.ts"
       ]
     }
   },
