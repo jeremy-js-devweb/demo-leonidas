@@ -32,6 +32,9 @@
       ],
       "@spartan-ng/aspectratio-helm": [
         "libs/ui/aspectratio-helm/src/index.ts"
+      ],
+      "@spartan-ng/badge-helm": [
+        "libs/ui/badge-helm/src/index.ts"
       ]
     }
   },
