@@ -11,8 +11,8 @@ import {
   HlmCardTitleDirective,
 } from '@spartan-ng/card-helm';
 import {MenuComponent} from "./menu/menu.component";
-
 import { HlmInputDirective } from '@spartan-ng/input-helm';
+import { HlmLabelDirective } from '@spartan-ng/label-helm';
 
 @Component({
   standalone: true,
@@ -23,7 +23,8 @@ import { HlmInputDirective } from '@spartan-ng/input-helm';
     HlmCardDescriptionDirective,
     HlmCardContentDirective,
     HlmCardFooterDirective, MenuComponent,
-    HlmInputDirective
+    HlmInputDirective,
+    HlmLabelDirective
   ],
   selector: 'demo-leonidas-root',
   template: `
@@ -48,7 +49,10 @@ import { HlmInputDirective } from '@spartan-ng/input-helm';
 
       <demo-leonidas-dropdown-menu/>
 
-      <input class="w-80" hlmInput placeholder='Email' type='email' />
+<!--      <input class="w-80" hlmInput placeholder='Email' type='email' />-->
+      <label hlmLabel>E-Mail
+        <input class='w-80' hlmInput type='email' placeholder='Email'/>
+      </label>
 
     </div>
   `
