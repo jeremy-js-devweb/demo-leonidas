@@ -23,6 +23,7 @@ import { HlmSeparatorDirective } from '@spartan-ng/separator-helm';
 import {SheetComponent} from "./sheet/sheet.component";
 
 import { HlmSkeletonComponent } from '@spartan-ng/skeleton-helm';
+import {TabsComponent} from "./tabs/tabs.component";
 
 @Component({
   standalone: true,
@@ -37,7 +38,7 @@ import { HlmSkeletonComponent } from '@spartan-ng/skeleton-helm';
     HlmLabelDirective, PopoverComponent,
     BrnProgressComponent, BrnProgressIndicatorComponent, HlmProgressIndicatorDirective, HlmProgressDirective,
     NgFor, HlmSeparatorDirective, HlmScrollAreaComponent, SheetComponent,
-    HlmSkeletonComponent
+    HlmSkeletonComponent, TabsComponent
   ],
   selector: 'demo-leonidas-root',
   template: `
@@ -85,13 +86,15 @@ import { HlmSkeletonComponent } from '@spartan-ng/skeleton-helm';
 
           <demo-leonidas-sheet/>
 
-        <div class='p-4 m-4 w-fit flex items-center space-x-4'>
-          <hlm-skeleton class='h-12 w-12 rounded-full' />
-          <div class='space-y-2'>
-            <hlm-skeleton class='h-4 w-[250px]' />
-            <hlm-skeleton class='h-4 w-[200px]' />
+          <div class='p-4 m-4 w-fit flex items-center space-x-4'>
+              <hlm-skeleton class='h-12 w-12 rounded-full'/>
+              <div class='space-y-2'>
+                  <hlm-skeleton class='h-4 w-[250px]'/>
+                  <hlm-skeleton class='h-4 w-[200px]'/>
+              </div>
           </div>
-        </div>
+
+          <demo-leonidas-tabs/>
 
       </div>
   `
