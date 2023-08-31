@@ -38,6 +38,9 @@
       ],
       "@spartan-ng/card-helm": [
         "libs/ui/card-helm/src/index.ts"
+      ],
+      "@spartan-ng/dialog-helm": [
+        "libs/ui/dialog-helm/src/index.ts"
       ]
     }
   },

@@ -6,7 +6,7 @@ import {
   HlmAlertTitleDirective,
 } from '@spartan-ng/alert-helm';
 import {provideIcons} from '@ng-icons/core';
-import {radixChevronRight, radixCube} from '@ng-icons/radix-icons';
+import {radixChevronRight, radixCross1, radixCube} from '@ng-icons/radix-icons';
 
 import {
   BrnAlertDialogCloseDirective,
@@ -29,6 +29,26 @@ import {
 } from '@spartan-ng/alertdialog-helm';
 import {HlmButtonDirective} from '@spartan-ng/button-helm';
 import {HlmIconComponent} from '@spartan-ng/icon-helm';
+
+
+import {
+  BrnDialogCloseDirective,
+  BrnDialogComponent,
+  BrnDialogContentDirective,
+  BrnDialogDescriptionDirective,
+  BrnDialogOverlayComponent,
+  BrnDialogTitleDirective,
+  BrnDialogTriggerDirective,
+} from '@spartan-ng/ui-dialog-brain';
+import {
+  HlmDialogCloseDirective,
+  HlmDialogContentDirective,
+  HlmDialogDescriptionDirective,
+  HlmDialogFooterComponent,
+  HlmDialogHeaderComponent,
+  HlmDialogOverlayDirective,
+  HlmDialogTitleDirective,
+} from '@spartan-ng/dialog-helm';
 
 
 @Component({
@@ -59,8 +79,24 @@ import {HlmIconComponent} from '@spartan-ng/icon-helm';
     HlmAlertDialogDescriptionDirective,
     HlmAlertDialogCancelButtonDirective,
     HlmAlertDialogActionButtonDirective,
+
+
+    BrnDialogComponent,
+    BrnDialogOverlayComponent,
+    BrnDialogTriggerDirective,
+    BrnDialogContentDirective,
+    BrnDialogCloseDirective,
+    BrnDialogTitleDirective,
+    BrnDialogDescriptionDirective,
+    HlmDialogOverlayDirective,
+    HlmDialogContentDirective,
+    HlmDialogHeaderComponent,
+    HlmDialogFooterComponent,
+    HlmDialogTitleDirective,
+    HlmDialogDescriptionDirective,
+    HlmDialogCloseDirective,
   ],
-  providers: [provideIcons({radixCube, radixChevronRight})],
+  providers: [provideIcons({radixCube, radixChevronRight, radixCross1})],
   template: `
     <div hlmAlert>
       <hlm-icon hlmAlertIcon name="radixCube"/>
@@ -97,6 +133,26 @@ import {HlmIconComponent} from '@spartan-ng/icon-helm';
         </hlm-alert-dialog-footer>
       </div>
     </brn-alert-dialog>
+
+
+    <brn-dialog closeDelay="100">
+      <brn-dialog-overlay hlm/>
+      <button brnDialogTrigger hlmBtn>Edit Profile</button>
+      <div hlmDialogContent *brnDialogContent="let ctx">
+        <hlm-dialog-header>
+          <h3 brnDialogTitle hlm>Edit profile</h3>
+          <p brnDialogDescription hlm>Make changes to your profile here. Click save when you're done.</p>
+        </hlm-dialog-header>
+        <hlm-dialog-footer>
+          <button hlmBtn type="submit" (click)="ctx.close()">Save changes</button>
+        </hlm-dialog-footer>
+        <button brnDialogClose hlm>
+          <span class="sr-only">Close</span>
+          <hlm-icon class="flex h-4 w-4" size="100%" name="radixCross1"/>
+        </button>
+      </div>
+    </brn-dialog>
+
   `,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
