@@ -96,6 +96,10 @@ import {TabsComponent} from "./tabs/tabs.component";
 
           <demo-leonidas-tabs/>
 
+
+          <textarea class="min-h-[80px] w-[300px]" hlmInput placeholder="Type your message here."></textarea>
+
+
       </div>
   `
 })
