@@ -56,6 +56,12 @@
       ],
       "@spartan-ng/progress-helm": [
         "libs/ui/progress-helm/src/index.ts"
+      ],
+      "@spartan-ng/scrollarea-helm": [
+        "libs/ui/scrollarea-helm/src/index.ts"
+      ],
+      "@spartan-ng/separator-helm": [
+        "libs/ui/separator-helm/src/index.ts"
       ]
     }
   },

@@ -1,0 +1,57 @@
+{
+  "name": "ui-scrollarea-helm",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/ui/scrollarea-helm/src",
+  "prefix": "hlm",
+  "tags": [],
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/angular:ng-packagr-lite",
+      "outputs": [
+        "{workspaceRoot}/dist/{projectRoot}"
+      ],
+      "options": {
+        "project": "libs/ui/scrollarea-helm/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/ui/scrollarea-helm/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/ui/scrollarea-helm/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": [
+        "{workspaceRoot}/coverage/{projectRoot}"
+      ],
+      "options": {
+        "jestConfig": "libs/ui/scrollarea-helm/jest.config.ts",
+        "passWithNoTests": true
+      },
+      "configurations": {
+        "ci": {
+          "ci": true,
+          "codeCoverage": true
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": [
+        "{options.outputFile}"
+      ],
+      "options": {
+        "lintFilePatterns": [
+          "libs/ui/scrollarea-helm/**/*.ts",
+          "libs/ui/scrollarea-helm/**/*.html",
+          "libs/ui/scrollarea-helm/package.json"
+        ]
+      }
+    }
+  }
+}
