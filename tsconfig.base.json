@@ -44,6 +44,9 @@
       ],
       "@spartan-ng/menu-helm": [
         "libs/ui/menu-helm/src/index.ts"
+      ],
+      "@spartan-ng/input-helm": [
+        "libs/ui/input-helm/src/index.ts"
       ]
     }
   },
